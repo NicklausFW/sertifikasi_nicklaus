@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sertifikasi_nicklaus/data/operasi_peminjaman.dart';
 import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
 
 import '../widgets/list_perpustakaan.dart';
+import 'borrowed_book_page.dart';
 
 class PerpustakaanPage extends StatefulWidget {
   const PerpustakaanPage({Key? key}) : super(key: key);
@@ -14,10 +16,12 @@ class PerpustakaanPage extends StatefulWidget {
 
 class _PerpustakaanPageState extends State<PerpustakaanPage> {
   OperasiPerpustakaan operasiPerpustakaan = OperasiPerpustakaan();
+  OperasiPeminjaman operasiPeminjaman = OperasiPeminjaman();
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 1,
+      length: 2,
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -28,6 +32,10 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
               Tab(
                 text: 'Halaman Perpustakaan',
                 icon: Icon(Icons.book),
+              ),
+              Tab(
+                text: 'Halaman Peminjaman',
+                icon: Icon(Icons.person),
               )
             ],
           ),
@@ -35,6 +43,7 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
         body: TabBarView(
           children: [
             BookCollectionPage(operasiPerpustakaan: operasiPerpustakaan),
+            BorrowedBookPage()
           ],
         ),
       ),
