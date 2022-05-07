@@ -1,21 +1,22 @@
+///model Perpustakaan
 class Perpustakaan {
-  int? id;
+  int? idBuku;
   String? judulBuku;
 
   Perpustakaan({
-    this.id,
+    this.idBuku,
     this.judulBuku,
   });
 
-  // convert Map to Contact Object
+  ///mengubah Map -> [Perpustakaan] Object
   static Perpustakaan fromMap(Map<String, dynamic> map) {
-    return Perpustakaan(id: map['id'], judulBuku: map['namaPeminjam']);
+    return Perpustakaan(idBuku: map['idBuku'], judulBuku: map['namaPeminjam']);
   }
 
-  //covert to Map, because SQLite take in map as input
+  /// Mengubah menjadi Map, karena SQLite menerima Map sebagai input
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
-      'id': id,
+      'idBuku': idBuku,
       'judulBuku': judulBuku,
     };
     return map;

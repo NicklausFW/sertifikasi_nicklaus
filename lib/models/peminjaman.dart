@@ -1,3 +1,4 @@
+///model Peminjaman
 class Peminjaman {
   int? id;
   String? namaPeminjam;
@@ -12,7 +13,7 @@ class Peminjaman {
       this.tanggalHarusKembali,
       this.koleksi});
 
-  // convert Map to Contact Object
+  ///mengubah Map -> [Peminjaman] Object
   static Peminjaman fromMap(Map<String, dynamic> map) {
     return Peminjaman(
         id: map['id'],
@@ -22,7 +23,7 @@ class Peminjaman {
         koleksi: map['koleksi']);
   }
 
-  //covert to Map, because SQLite take in map as input
+  /// Mengubah menjadi Map, karena SQLite menerima Map sebagai input
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
       'namaPeminjam': namaPeminjam,
