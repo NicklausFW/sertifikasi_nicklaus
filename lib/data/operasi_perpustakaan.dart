@@ -8,13 +8,13 @@ class OperasiPerpustakaan {
   createPerpustakaan(Perpustakaan perpustakaan) async {
     final db = await dbRepository.database;
     print(perpustakaan.judulBuku);
+    print(perpustakaan.idBuku);
     db.insert('perpustakaan', perpustakaan.toMap());
   }
 
   Future<List<Perpustakaan>> getAllPerpustakaan() async {
     final db = await dbRepository.database;
-    List<Map<String, dynamic>> allRows =
-        await db.query('perpustakaan', orderBy: 'judulBuku');
+    List<Map<String, dynamic>> allRows = await db.query('perpustakaan');
     List<Perpustakaan> perpustakaan = allRows
         .map((perpustakaan) => Perpustakaan.fromMap(perpustakaan))
         .toList();

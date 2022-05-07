@@ -10,13 +10,12 @@ class Perpustakaan {
 
   ///mengubah Map -> [Perpustakaan] Object
   static Perpustakaan fromMap(Map<String, dynamic> map) {
-    return Perpustakaan(idBuku: map['idBuku'], judulBuku: map['namaPeminjam']);
+    return Perpustakaan(idBuku: map['idBuku'], judulBuku: map['judulBuku']);
   }
 
   /// Mengubah menjadi Map, karena SQLite menerima Map sebagai input
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{
-      'idBuku': idBuku,
       'judulBuku': judulBuku,
     };
     return map;
