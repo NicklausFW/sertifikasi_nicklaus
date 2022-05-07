@@ -1,18 +1,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_anggota.dart';
-import 'package:sertifikasi_nicklaus/widgets/list_anggota.dart';
-import '../models/anggota.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_peminjaman.dart';
+import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 
-class AnggotaPage extends StatefulWidget {
-  const AnggotaPage({Key? key}) : super(key: key);
+import '../widgets/list_peminjaman.dart';
+
+class BorrowedBookPage extends StatefulWidget {
+  const BorrowedBookPage({Key? key}) : super(key: key);
 
   @override
-  State<AnggotaPage> createState() => _AnggotaPageState();
+  State<BorrowedBookPage> createState() => _BorrowedBookPageState();
 }
 
-class _AnggotaPageState extends State<AnggotaPage> {
-  final OperasiAnggota operasiAnggota = OperasiAnggota();
+class _BorrowedBookPageState extends State<BorrowedBookPage> {
+  final OperasiPeminjaman operasiPeminjaman = OperasiPeminjaman();
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +24,13 @@ class _AnggotaPageState extends State<AnggotaPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               FutureBuilder(
-                  future: operasiAnggota.getAllAnggota(),
+                  future: operasiPeminjaman.getAllPeminjaman(),
                   builder: (context, snapshot) {
                     if (!snapshot.hasData) {
                       return Text('No Data Yet!');
                     }
-                    var data = snapshot.data! as List<Anggota>;
-                    return ListAnggota(data);
+                    var data = snapshot.data! as List<Peminjaman>;
+                    return ListPeminjaman(data);
                   }),
             ],
           ),
@@ -37,7 +38,7 @@ class _AnggotaPageState extends State<AnggotaPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).pushReplacementNamed('/addAnggotaPage');
+          Navigator.of(context).pushReplacementNamed('/addPeminjamanPage');
         },
         backgroundColor: Color(0xffD21F3C),
         child: const Icon(Icons.person_add),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/pages/add_anggota_page.dart';
-import 'package:sertifikasi_nicklaus/pages/add_buku_perpustakaan_page.dart';
-import 'package:sertifikasi_nicklaus/pages/add_peminjaman_page.dart';
-import 'package:sertifikasi_nicklaus/pages/perpustakaan_page.dart';
+import 'package:sertifikasi_nicklaus/views/pages/add_anggota_page.dart';
+import 'package:sertifikasi_nicklaus/views/pages/add_buku_perpustakaan_page.dart';
+import 'package:sertifikasi_nicklaus/views/pages/add_peminjaman_page.dart';
+import 'package:sertifikasi_nicklaus/views/pages/perpustakaan_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

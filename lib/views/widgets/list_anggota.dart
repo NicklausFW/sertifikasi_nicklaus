@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_anggota.dart';
-import '../models/anggota.dart';
+import '../../models/anggota.dart';
+import '../../view_model/operasi_anggota.dart';
 
 class ListAnggota extends StatefulWidget {
   List<Anggota> anggota;
@@ -24,7 +24,7 @@ class _ListAnggotaState extends State<ListAnggota> {
       itemBuilder: (BuildContext context, int index) {
         return Card(
           child: Text(
-            '${widget.anggota[index].namaAnggota}',
+            'Nama Anggota: ${widget.anggota[index].namaAnggota}',
             textWidthBasis: TextWidthBasis.longestLine,
             overflow: TextOverflow.fade,
             textAlign: TextAlign.left,

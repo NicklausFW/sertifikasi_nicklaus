@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_anggota.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_peminjaman.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
+
 import 'package:sertifikasi_nicklaus/models/anggota.dart';
 import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 import 'package:intl/intl.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
-import 'package:sertifikasi_nicklaus/widgets/dropdown_anggota.dart';
+import '../../view_model/operasi_anggota.dart';
+import '../../view_model/operasi_peminjaman.dart';
+import '../../view_model/operasi_perpustakaan.dart';
+import '../widgets/dropdown_anggota.dart';
 import '../widgets/dropdown_peminjaman.dart';
 
 class AddPeminjamanPage extends StatefulWidget {
@@ -18,7 +19,6 @@ class AddPeminjamanPage extends StatefulWidget {
 }
 
 class _AddPeminjamanPageState extends State<AddPeminjamanPage> {
-  final _namaPeminjam = TextEditingController();
   OperasiPeminjaman operasiPeminjaman = OperasiPeminjaman();
   OperasiPerpustakaan operasiPerpustakaan = OperasiPerpustakaan();
   OperasiAnggota operasiAnggota = OperasiAnggota();

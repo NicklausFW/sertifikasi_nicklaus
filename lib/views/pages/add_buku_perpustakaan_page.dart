@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_perpustakaan.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
 
 class AddBukuPerpustakaanPage extends StatefulWidget {

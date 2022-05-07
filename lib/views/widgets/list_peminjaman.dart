@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_peminjaman.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_peminjaman.dart';
 import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 
 class ListPeminjaman extends StatefulWidget {

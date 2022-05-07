@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_peminjaman.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
-import 'package:sertifikasi_nicklaus/models/anggota.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_peminjaman.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_perpustakaan.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
-import 'package:sertifikasi_nicklaus/pages/anggota_page.dart';
-
 import '../widgets/list_perpustakaan.dart';
+import 'anggota_page.dart';
 import 'borrowed_book_page.dart';
 
 class PerpustakaanPage extends StatefulWidget {

@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
-
-import '../models/perpustakaan.dart';
+import 'package:sertifikasi_nicklaus/view_model/operasi_perpustakaan.dart';
+import '../../models/perpustakaan.dart';
 
 class ListPerpustakaan extends StatefulWidget {
   List<Perpustakaan> perpustakaan;
@@ -36,7 +35,7 @@ class _ListPerpustakaanState extends State<ListPerpustakaan> {
                     Padding(
                       padding: EdgeInsets.only(left: 10),
                       child: Text(
-                        ' ${widget.perpustakaan[index].judulBuku}',
+                        'Judul Buku: ${widget.perpustakaan[index].judulBuku}',
                         textWidthBasis: TextWidthBasis.longestLine,
                         overflow: TextOverflow.fade,
                         textAlign: TextAlign.left,

@@ -1,5 +1,4 @@
 import 'package:sertifikasi_nicklaus/models/anggota.dart';
-import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 import 'database.dart';
 
 class OperasiAnggota {
