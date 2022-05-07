@@ -21,73 +21,52 @@ class _ListPeminjamanState extends State<ListPeminjaman> {
       itemCount: widget.peminjaman.length,
       itemBuilder: (BuildContext context, int index) {
         return Card(
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(
-                width: 200,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        ' ${widget.peminjaman[index].namaPeminjam}',
-                        textWidthBasis: TextWidthBasis.longestLine,
-                        overflow: TextOverflow.fade,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        ' ${widget.peminjaman[index].tanggalPinjam}',
-                        textWidthBasis: TextWidthBasis.longestLine,
-                        overflow: TextOverflow.fade,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        ' ${widget.peminjaman[index].tanggalHarusKembali}',
-                        textWidthBasis: TextWidthBasis.longestLine,
-                        overflow: TextOverflow.fade,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 10),
-                      child: Text(
-                        ' ${widget.peminjaman[index].koleksi}',
-                        textWidthBasis: TextWidthBasis.longestLine,
-                        overflow: TextOverflow.fade,
-                        textAlign: TextAlign.left,
-                        style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+              Text(
+                'Anggota Yang Pinjam: ${widget.peminjaman[index].FK_anggota_perpustakaan}',
+                textWidthBasis: TextWidthBasis.longestLine,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Tanggal Pinjam: ${widget.peminjaman[index].tanggalPinjam}',
+                textWidthBasis: TextWidthBasis.longestLine,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Tanggal Harus Kembali: ${widget.peminjaman[index].tanggalHarusKembali}',
+                textWidthBasis: TextWidthBasis.longestLine,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Buku Yang Dipinjam: ${widget.peminjaman[index].FK_peminjaman_perpustakaan}',
+                textWidthBasis: TextWidthBasis.longestLine,
+                overflow: TextOverflow.fade,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ],

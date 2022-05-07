@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sertifikasi_nicklaus/data/operasi_peminjaman.dart';
 import 'package:sertifikasi_nicklaus/data/operasi_perpustakaan.dart';
+import 'package:sertifikasi_nicklaus/models/anggota.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
+import 'package:sertifikasi_nicklaus/pages/anggota_page.dart';
 
 import '../widgets/list_perpustakaan.dart';
 import 'borrowed_book_page.dart';
@@ -21,7 +23,7 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -35,6 +37,10 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
               ),
               Tab(
                 text: 'Halaman Peminjaman',
+                icon: Icon(Icons.book_online),
+              ),
+              Tab(
+                text: 'List Anggota',
                 icon: Icon(Icons.person),
               )
             ],
@@ -43,7 +49,8 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
         body: TabBarView(
           children: [
             BookCollectionPage(operasiPerpustakaan: operasiPerpustakaan),
-            BorrowedBookPage()
+            BorrowedBookPage(),
+            AnggotaPage()
           ],
         ),
       ),

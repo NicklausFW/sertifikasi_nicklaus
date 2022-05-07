@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sertifikasi_nicklaus/pages/add_anggota_page.dart';
 import 'package:sertifikasi_nicklaus/pages/add_buku_perpustakaan_page.dart';
 import 'package:sertifikasi_nicklaus/pages/add_peminjaman_page.dart';
 import 'package:sertifikasi_nicklaus/pages/perpustakaan_page.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => PerpustakaanPage(),
         '/addBukuPerpustakaanPage': (context) => AddBukuPerpustakaanPage(),
         '/addPeminjamanPage': (context) => AddPeminjamanPage(),
+        '/addAnggotaPage': (context) => AddAnggotaPage(),
       },
     );
   }
