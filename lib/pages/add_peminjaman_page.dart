@@ -87,15 +87,17 @@ class _AddPeminjamanPageState extends State<AddPeminjamanPage> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Color(0xffD21F3C),
           onPressed: () async {
-            final peminjaman = Peminjaman(
-                FK_anggota_perpustakaan: _selectedAnggota?.namaAnggota,
-                tanggalHarusKembali: DateFormat('yyyy-MM-dd – kk:mm')
-                    .format(now.add(Duration(days: 7))) as String,
-                tanggalPinjam:
-                    DateFormat('yyyy-MM-dd – kk:mm').format(now) as String,
-                FK_peminjaman_perpustakaan: _selectedBook?.judulBuku);
-            operasiPeminjaman.createPeminjaman(peminjaman);
-            Navigator.of(context).pushReplacementNamed('/');
+            if (_selectedAnggota != null && _selectedBook != null) {
+              final peminjaman = Peminjaman(
+                  FK_anggota_perpustakaan: _selectedAnggota?.namaAnggota,
+                  tanggalHarusKembali: DateFormat('yyyy-MM-dd – kk:mm')
+                      .format(now.add(Duration(days: 7))) as String,
+                  tanggalPinjam:
+                      DateFormat('yyyy-MM-dd – kk:mm').format(now) as String,
+                  FK_peminjaman_perpustakaan: _selectedBook?.judulBuku);
+              operasiPeminjaman.createPeminjaman(peminjaman);
+              Navigator.of(context).pushReplacementNamed('/');
+            }
           },
           child: Icon(Icons.add),
         ),
