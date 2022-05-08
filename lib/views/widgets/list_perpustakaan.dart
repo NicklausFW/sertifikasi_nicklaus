@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sertifikasi_nicklaus/view_model/operasi_perpustakaan.dart';
 import '../../models/perpustakaan.dart';
 
+///shows list of buku perpustakaan when buku perpustakaan adeed
 class ListPerpustakaan extends StatefulWidget {
   List<Perpustakaan> perpustakaan;
   ListPerpustakaan(this.perpustakaan, {Key? key}) : super(key: key);

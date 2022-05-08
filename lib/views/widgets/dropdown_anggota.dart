@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sertifikasi_nicklaus/models/anggota.dart';
-import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
 
+///dropdown for add_peminjaman_page so the librarian can select the book that the member borrows
 class DropdownAnggota extends StatefulWidget {
   List<Anggota> anggota;
   Function(Anggota) callbackSelectedAnggota;

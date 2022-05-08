@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sertifikasi_nicklaus/view_model/operasi_peminjaman.dart';
 import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 
+///shows list of peminjaman when peminjaman added
 class ListPeminjaman extends StatefulWidget {
   List<Peminjaman> peminjaman;
   ListPeminjaman(this.peminjaman, {Key? key}) : super(key: key);

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../models/anggota.dart';
 import '../../view_model/operasi_anggota.dart';
 
+///shows list of anggota when anggota added
 class ListAnggota extends StatefulWidget {
   List<Anggota> anggota;
 

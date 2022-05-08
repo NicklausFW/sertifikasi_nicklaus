@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sertifikasi_nicklaus/models/anggota.dart';
 import 'package:sertifikasi_nicklaus/models/perpustakaan.dart';
 
-class DropdownPeminjaman extends StatefulWidget {
+///dropdown for add_peminjaman_page so the librarian can select the book that the member borrows
+class DropdownPerpustakaan extends StatefulWidget {
   List<Perpustakaan> perpustakaan;
   Function(Perpustakaan) callbackSelectedBook;
 
-  DropdownPeminjaman(this.perpustakaan, this.callbackSelectedBook, {Key? key})
+  DropdownPerpustakaan(this.perpustakaan, this.callbackSelectedBook, {Key? key})
       : super(key: key);
 
   @override
-  State<DropdownPeminjaman> createState() => _DropdownPeminjamanState();
+  State<DropdownPerpustakaan> createState() => _DropdownPerpustakaanState();
 }
 
-class _DropdownPeminjamanState extends State<DropdownPeminjaman> {
+class _DropdownPerpustakaanState extends State<DropdownPerpustakaan> {
   String? selectedBook;
 
   @override

@@ -8,7 +8,7 @@ import '../../view_model/operasi_anggota.dart';
 import '../../view_model/operasi_peminjaman.dart';
 import '../../view_model/operasi_perpustakaan.dart';
 import '../widgets/dropdown_anggota.dart';
-import '../widgets/dropdown_peminjaman.dart';
+import '../widgets/dropdown_perpustakaan.dart';
 
 ///page to make peminjaman
 class AddPeminjamanPage extends StatefulWidget {
@@ -77,7 +77,7 @@ class _AddPeminjamanPageState extends State<AddPeminjamanPage> {
                       return Text('No Data Yet!');
                     }
                     var data = snapshot.data! as List<Perpustakaan>;
-                    return DropdownPeminjaman(data, callbackSelectedBook);
+                    return DropdownPerpustakaan(data, callbackSelectedBook);
                   },
                 )
               ],
