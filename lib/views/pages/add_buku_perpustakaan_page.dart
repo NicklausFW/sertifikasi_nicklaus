@@ -39,7 +39,6 @@ class _AddBukuPerpustakaanPageState extends State<AddBukuPerpustakaanPage> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextField(
-                    maxLength: 10,
                     controller: _judulBukuController,
                     decoration: const InputDecoration(
                         border: OutlineInputBorder(),
