@@ -35,6 +35,7 @@ class _AddAnggotaPageState extends State<AddAnggotaPage> {
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextField(
+                maxLength: 45,
                 controller: _namaAnggotaController,
                 decoration: const InputDecoration(
                     border: OutlineInputBorder(),

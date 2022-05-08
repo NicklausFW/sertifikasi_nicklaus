@@ -20,6 +20,7 @@ class _DropdownAnggotaState extends State<DropdownAnggota> {
   @override
   Widget build(BuildContext context) {
     return DropdownButton<Anggota>(
+      isExpanded: true,
       items: widget.anggota.map((anggota) {
         return DropdownMenuItem(
           value: anggota,

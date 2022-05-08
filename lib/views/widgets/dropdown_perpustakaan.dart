@@ -20,6 +20,7 @@ class _DropdownPerpustakaanState extends State<DropdownPerpustakaan> {
   @override
   Widget build(BuildContext context) {
     return DropdownButton<Perpustakaan>(
+      isExpanded: true,
       items: widget.perpustakaan.map((buku) {
         return DropdownMenuItem(
           value: buku,
