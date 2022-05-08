@@ -12,7 +12,6 @@ class DatabaseRepository {
 
   final _databaseName = 'database.db';
   final _databaseVersion = 1;
-
   static Database? _database;
 
   ///check if our database has been created, otherwise create a new database
@@ -45,7 +44,7 @@ class DatabaseRepository {
     await db.execute('''
     CREATE TABLE perpustakaan (
       idBuku INTEGER PRIMARY KEY AUTOINCREMENT,
-      judulBuku STRING
+      judulBuku STRING UNIQUE
       )
       ''');
 
@@ -53,7 +52,7 @@ class DatabaseRepository {
     await db.execute('''
     CREATE TABLE anggota (
       idAnggota INTEGER PRIMARY KEY AUTOINCREMENT,
-      namaAnggota STRING
+      namaAnggota STRING UNIQUE
       )
       ''');
   }

@@ -14,7 +14,7 @@ class OperasiAnggota {
   ///get all content
   Future<List<Anggota>> getAllAnggota() async {
     final db = await dbRepository.database;
-    List<Map<String, dynamic>> allRows = await db.query('anggota');
+    List<Map<String, dynamic>> allRows = await db.query('anggota', orderBy: 'namaAnggota');
     List<Anggota> anggota =
         allRows.map((anggota) => Anggota.fromMap(anggota)).toList();
     return anggota;

@@ -37,8 +37,10 @@ dependencies:
   sqflite: ^2.0.2+1
   intl: ^0.17.0
   multi_select_flutter: ^4.1.2
+  sqflite_common_ffi: ^2.1.1
 
 dev_dependencies:
+  sqflite_common_ffi:
   flutter_test:
     sdk: flutter
 

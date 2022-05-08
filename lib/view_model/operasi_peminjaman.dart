@@ -14,7 +14,7 @@ class OperasiPeminjaman {
   ///get all content
   Future<List<Peminjaman>> getAllPeminjaman() async {
     final db = await dbRepository.database;
-    List<Map<String, dynamic>> allRows = await db.query('peminjaman');
+    List<Map<String, dynamic>> allRows = await db.query('peminjaman', orderBy: 'FK_anggota_perpustakaan');
     List<Peminjaman> peminjaman =
         allRows.map((peminjaman) => Peminjaman.fromMap(peminjaman)).toList();
     return peminjaman;
