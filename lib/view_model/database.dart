@@ -1,12 +1,12 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-//Singleton
+///Singleton
 class DatabaseRepository {
-  //private named constructor
+  ///private named constructor
   DatabaseRepository._privateConstructor();
 
-  //referencing to instance of itself
+  ///referencing to instance of itself
   static final DatabaseRepository instance =
       DatabaseRepository._privateConstructor();
 
@@ -15,9 +15,10 @@ class DatabaseRepository {
 
   static Database? _database;
 
-  //check if our database has been created, otherwise create a new database
+  ///check if our database has been created, otherwise create a new database
   Future<Database> get database async => _database ??= await _initDatabase();
 
+  ///creating database
   Future<Database> _initDatabase() async {
     String documents = await getDatabasesPath();
     String path = join(documents + _databaseName);
@@ -25,7 +26,9 @@ class DatabaseRepository {
         version: _databaseVersion, onCreate: await _onCreate);
   }
 
+  ///when creating the db, create the table
   Future _onCreate(Database db, int version) async {
+    ///create peminjaman table
     await db.execute('''
     CREATE TABLE peminjaman (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,6 +41,7 @@ class DatabaseRepository {
       )
       ''');
 
+    ///create perpustakaan table
     await db.execute('''
     CREATE TABLE perpustakaan (
       idBuku INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -45,6 +49,7 @@ class DatabaseRepository {
       )
       ''');
 
+    ///create anggota table
     await db.execute('''
     CREATE TABLE anggota (
       idAnggota INTEGER PRIMARY KEY AUTOINCREMENT,

@@ -4,6 +4,7 @@ import '../../models/anggota.dart';
 import '../../view_model/operasi_anggota.dart';
 import '../widgets/list_anggota.dart';
 
+///page as a hub to add_anggota_page and list_anggota
 class AnggotaPage extends StatefulWidget {
   const AnggotaPage({Key? key}) : super(key: key);
 
@@ -13,7 +14,6 @@ class AnggotaPage extends StatefulWidget {
 
 class _AnggotaPageState extends State<AnggotaPage> {
   final OperasiAnggota operasiAnggota = OperasiAnggota();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -5,6 +5,7 @@ import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 
 import '../widgets/list_peminjaman.dart';
 
+///page as a hub to add_peminjaman_page and list_peminjaman
 class BorrowedBookPage extends StatefulWidget {
   const BorrowedBookPage({Key? key}) : super(key: key);
 

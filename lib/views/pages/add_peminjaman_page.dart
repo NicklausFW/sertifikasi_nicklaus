@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:sertifikasi_nicklaus/models/anggota.dart';
 import 'package:sertifikasi_nicklaus/models/peminjaman.dart';
 import 'package:intl/intl.dart';
@@ -11,6 +10,7 @@ import '../../view_model/operasi_perpustakaan.dart';
 import '../widgets/dropdown_anggota.dart';
 import '../widgets/dropdown_peminjaman.dart';
 
+///page to make peminjaman
 class AddPeminjamanPage extends StatefulWidget {
   const AddPeminjamanPage({Key? key}) : super(key: key);
 

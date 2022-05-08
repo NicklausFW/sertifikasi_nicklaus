@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sertifikasi_nicklaus/view_model/operasi_anggota.dart';
 import 'package:sertifikasi_nicklaus/models/anggota.dart';
 
+///page to add anggota
 class AddAnggotaPage extends StatefulWidget {
   const AddAnggotaPage({Key? key}) : super(key: key);
 

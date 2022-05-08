@@ -7,6 +7,7 @@ import '../widgets/list_perpustakaan.dart';
 import 'anggota_page.dart';
 import 'borrowed_book_page.dart';
 
+///page as a hub to book_collection_page, anggota_page, and borrowed_book_page
 class PerpustakaanPage extends StatefulWidget {
   const PerpustakaanPage({Key? key}) : super(key: key);
 
@@ -56,6 +57,7 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
   }
 }
 
+///page as a hub to add_buku_perpustakaan_page and list_perpustakaan
 class BookCollectionPage extends StatelessWidget {
   const BookCollectionPage({
     Key? key,
