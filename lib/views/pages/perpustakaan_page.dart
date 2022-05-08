@@ -32,11 +32,11 @@ class _PerpustakaanPageState extends State<PerpustakaanPage> {
           bottom: TabBar(
             tabs: [
               Tab(
-                text: 'Halaman Perpustakaan',
+                text: 'Katalog Buku',
                 icon: Icon(Icons.book),
               ),
               Tab(
-                text: 'Halaman Peminjaman',
+                text: 'List Pinjaman',
                 icon: Icon(Icons.book_online),
               ),
               Tab(
